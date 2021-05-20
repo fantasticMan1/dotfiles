@@ -16,7 +16,15 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
+let g:airline_powerline_fonts=1
+
 " ==== OPTIONS ====
+
+" Always use Vim, never Vi
+set nocompatible
+
+" Fix weird backspace behavior
+set backspace=indent,eol,start
 
 " Do not discard buffer before editing a new one
 set hidden
@@ -45,6 +53,7 @@ set tabstop=4
 
 " If there are multiple matches when autocompleting, list them all and
 " complete the longest section that they all agree on
+set wildmode
 set wildmode=list:longest
 
 " Attempt to infer file type
